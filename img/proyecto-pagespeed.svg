@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="pagespeed-title">
+    <title id="pagespeed-title">Ilustración: cinco mediciones de rendimiento y su promedio</title>
+    <defs>
+        <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.4" fill="#2a2d31"/>
+        </pattern>
+    </defs>
+
+    <!-- Fondo -->
+    <rect width="640" height="400" fill="#16181b"/>
+    <rect width="640" height="400" fill="url(#dots)"/>
+
+    <!-- Barra superior estilo editor -->
+    <circle cx="28" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="46" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="64" cy="28" r="5" fill="#2a2d31"/>
+    <text x="612" y="33" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="13" fill="#8a857c">pagespeed.xlsx</text>
+
+    <!-- Barras: una por medición (datos ilustrativos) -->
+    <line x1="56" y1="330" x2="392" y2="330" stroke="#2a2d31" stroke-width="2"/>
+    <g fill="#2a2d31">
+        <rect x="72" y="160" width="40" height="170" rx="4"/>
+        <rect x="136" y="143" width="40" height="187" rx="4"/>
+        <rect x="200" y="152" width="40" height="178" rx="4"/>
+        <rect x="264" y="164" width="40" height="166" rx="4"/>
+        <rect x="328" y="148" width="40" height="182" rx="4"/>
+    </g>
+    <line x1="56" y1="153" x2="392" y2="153" stroke="#d2b07a" stroke-width="2" stroke-dasharray="6 6"/>
+    <g font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="12" fill="#8a857c" text-anchor="middle">
+        <text x="92" y="354">1</text>
+        <text x="156" y="354">2</text>
+        <text x="220" y="354">3</text>
+        <text x="284" y="354">4</text>
+        <text x="348" y="354">5</text>
+    </g>
+
+    <!-- Indicador del promedio -->
+    <circle cx="510" cy="196" r="78" fill="none" stroke="#2a2d31" stroke-width="12"/>
+    <circle cx="510" cy="196" r="78" fill="none" stroke="#d2b07a" stroke-width="12" stroke-linecap="round" stroke-dasharray="361 490" transform="rotate(-90 510 196)"/>
+    <text x="510" y="208" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="38" font-weight="700" fill="#ece8e1">73.6</text>
+    <text x="510" y="306" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="13" fill="#8a857c">promedio</text>
+</svg>

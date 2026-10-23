@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="fabricante-title">
+    <title id="fabricante-title">Ilustración: páginas armadas con los mismos bloques reutilizables</title>
+    <defs>
+        <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.4" fill="#2a2d31"/>
+        </pattern>
+    </defs>
+
+    <!-- Fondo -->
+    <rect width="640" height="400" fill="#16181b"/>
+    <rect width="640" height="400" fill="url(#dots)"/>
+
+    <!-- Barra superior estilo editor -->
+    <circle cx="28" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="46" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="64" cy="28" r="5" fill="#2a2d31"/>
+    <text x="612" y="33" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="13" fill="#8a857c">patrones.css</text>
+
+    <!-- Biblioteca de patrones -->
+    <text x="48" y="86" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="13" fill="#8a857c">patrones</text>
+    <rect x="48" y="102" width="152" height="56" rx="6" fill="#d2b07a" fill-opacity="0.45"/>
+    <g fill="none" stroke="#d2b07a">
+        <rect x="48.5" y="172.5" width="44" height="40" rx="5"/>
+        <rect x="102.5" y="172.5" width="44" height="40" rx="5"/>
+        <rect x="156.5" y="172.5" width="44" height="40" rx="5"/>
+    </g>
+    <rect x="48" y="226" width="152" height="32" rx="6" fill="#2a2d31"/>
+    <rect x="104" y="238" width="40" height="8" rx="4" fill="#d2b07a"/>
+    <rect x="48" y="272" width="152" height="24" rx="6" fill="#2a2d31" fill-opacity="0.6"/>
+
+    <!-- Colores y tipografía globales -->
+    <circle cx="60" cy="330" r="10" fill="#d2b07a"/>
+    <circle cx="88" cy="330" r="10" fill="#ece8e1"/>
+    <circle cx="116" cy="330" r="10" fill="#8a857c"/>
+    <text x="200" y="338" text-anchor="end" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="700" fill="#ece8e1">Aa</text>
+
+    <line x1="224" y1="200" x2="252" y2="200" stroke="#d2b07a" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <!-- Página 1 -->
+    <rect x="264" y="70" width="104" height="296" rx="8" fill="#0f1012" stroke="#2a2d31"/>
+    <rect x="274" y="82" width="84" height="56" rx="4" fill="#d2b07a" fill-opacity="0.45"/>
+    <rect x="274" y="148" width="25" height="28" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="303" y="148" width="25" height="28" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="332" y="148" width="25" height="28" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="274" y="186" width="84" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="274" y="202" width="64" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="274" y="220" width="84" height="24" rx="4" fill="#2a2d31"/>
+    <rect x="274" y="334" width="84" height="20" rx="4" fill="#2a2d31" fill-opacity="0.6"/>
+
+    <!-- Página 2 -->
+    <rect x="384" y="70" width="104" height="296" rx="8" fill="#0f1012" stroke="#2a2d31"/>
+    <rect x="394" y="82" width="84" height="40" rx="4" fill="#d2b07a" fill-opacity="0.45"/>
+    <rect x="394" y="132" width="84" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="394" y="148" width="70" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="394" y="166" width="84" height="24" rx="4" fill="#2a2d31"/>
+    <rect x="394" y="200" width="25" height="28" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="423" y="200" width="25" height="28" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="452" y="200" width="25" height="28" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="394" y="334" width="84" height="20" rx="4" fill="#2a2d31" fill-opacity="0.6"/>
+
+    <!-- Página 3 -->
+    <rect x="504" y="70" width="104" height="296" rx="8" fill="#0f1012" stroke="#2a2d31"/>
+    <rect x="514" y="82" width="84" height="56" rx="4" fill="#d2b07a" fill-opacity="0.45"/>
+    <rect x="514" y="148" width="84" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="514" y="164" width="56" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="514" y="182" width="40" height="40" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="558" y="182" width="40" height="40" rx="3" fill="none" stroke="#d2b07a"/>
+    <rect x="514" y="232" width="84" height="24" rx="4" fill="#2a2d31"/>
+    <rect x="514" y="334" width="84" height="20" rx="4" fill="#2a2d31" fill-opacity="0.6"/>
+</svg>

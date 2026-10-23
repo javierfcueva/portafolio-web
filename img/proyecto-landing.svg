@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="landing-title">
+    <title id="landing-title">Ilustración: varias landing pages y una lista de control completada</title>
+    <defs>
+        <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.4" fill="#2a2d31"/>
+        </pattern>
+    </defs>
+
+    <!-- Fondo -->
+    <rect width="640" height="400" fill="#16181b"/>
+    <rect width="640" height="400" fill="url(#dots)"/>
+
+    <!-- Barra superior estilo editor -->
+    <circle cx="28" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="46" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="64" cy="28" r="5" fill="#2a2d31"/>
+    <text x="612" y="33" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="13" fill="#8a857c">qa-checklist.md</text>
+
+    <!-- Páginas apiladas -->
+    <rect x="48" y="70" width="200" height="252" rx="8" fill="#0f1012" stroke="#2a2d31"/>
+    <rect x="72" y="92" width="200" height="252" rx="8" fill="#0f1012" stroke="#2a2d31"/>
+    <rect x="96" y="114" width="200" height="252" rx="8" fill="#0f1012" stroke="#d2b07a"/>
+    <rect x="112" y="130" width="168" height="72" rx="4" fill="#d2b07a" fill-opacity="0.45"/>
+    <rect x="112" y="216" width="140" height="8" rx="4" fill="#ece8e1" fill-opacity="0.6"/>
+    <rect x="112" y="232" width="112" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="112" y="248" width="128" height="8" rx="4" fill="#2a2d31"/>
+    <rect x="112" y="272" width="80" height="26" rx="13" fill="#d2b07a"/>
+    <rect x="112" y="314" width="168" height="36" rx="4" fill="#2a2d31" fill-opacity="0.6"/>
+
+    <!-- Lista de control -->
+    <g fill="none" stroke="#d2b07a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="352" y="78" width="20" height="20" rx="4" stroke-width="2"/>
+        <path d="M357 88 L361 92 L367 83"/>
+        <rect x="352" y="118" width="20" height="20" rx="4" stroke-width="2"/>
+        <path d="M357 128 L361 132 L367 123"/>
+        <rect x="352" y="158" width="20" height="20" rx="4" stroke-width="2"/>
+        <path d="M357 168 L361 172 L367 163"/>
+        <rect x="352" y="198" width="20" height="20" rx="4" stroke-width="2"/>
+        <path d="M357 208 L361 212 L367 203"/>
+        <rect x="352" y="238" width="20" height="20" rx="4" stroke-width="2"/>
+        <path d="M357 248 L361 252 L367 243"/>
+        <rect x="352" y="278" width="20" height="20" rx="4" stroke-width="2"/>
+        <path d="M357 288 L361 292 L367 283"/>
+    </g>
+    <g fill="#2a2d31">
+        <rect x="388" y="84" width="180" height="8" rx="4"/>
+        <rect x="388" y="124" width="140" height="8" rx="4"/>
+        <rect x="388" y="164" width="164" height="8" rx="4"/>
+        <rect x="388" y="204" width="120" height="8" rx="4"/>
+        <rect x="388" y="244" width="172" height="8" rx="4"/>
+        <rect x="388" y="284" width="132" height="8" rx="4"/>
+    </g>
+    <text x="352" y="350" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="14" fill="#d2b07a">17 / 17 controles</text>
+</svg>

@@ -10,6 +10,7 @@
    7. Encabezados de sección
    8. Sobre mí
    9. Habilidades
+   10. Proyectos
    ========================================================================== */
 
 
@@ -641,4 +642,98 @@ p {
 .tag:hover {
     border-color: var(--accent);
     color: var(--accent);
+}
+
+
+/* 10. Proyectos
+   -------------------------------------------------------------------------- */
+
+.section-lead {
+    max-width: 40rem;
+    margin-top: calc(var(--space-6) * -1);
+    margin-bottom: var(--space-12);
+    color: var(--muted);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-6);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    transition:
+        border-color var(--duration) var(--ease),
+        transform var(--duration) var(--ease);
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.project-figure {
+    overflow: hidden;
+    border-bottom: 1px solid var(--rule);
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 0.3s var(--ease);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--space-3);
+    padding: var(--space-6);
+}
+
+.project-meta {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--muted);
+}
+
+.project-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+.project-text {
+    font-size: var(--text-sm);
+    color: var(--muted);
+}
+
+.project-body .tag-list {
+    margin-top: var(--space-1);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: auto;
+    padding-top: var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
 }

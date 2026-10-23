@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="registro-title">
+    <title id="registro-title">Ilustración: formulario de registro en cuatro pasos</title>
+    <defs>
+        <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.4" fill="#2a2d31"/>
+        </pattern>
+    </defs>
+
+    <!-- Fondo -->
+    <rect width="640" height="400" fill="#16181b"/>
+    <rect width="640" height="400" fill="url(#dots)"/>
+
+    <!-- Barra superior estilo editor -->
+    <circle cx="28" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="46" cy="28" r="5" fill="#2a2d31"/>
+    <circle cx="64" cy="28" r="5" fill="#2a2d31"/>
+    <text x="612" y="33" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="13" fill="#8a857c">registro.html</text>
+
+    <!-- Pasos -->
+    <line x1="140" y1="92" x2="380" y2="92" stroke="#d2b07a" stroke-width="2"/>
+    <line x1="380" y1="92" x2="500" y2="92" stroke="#2a2d31" stroke-width="2"/>
+    <circle cx="140" cy="92" r="16" fill="#d2b07a"/>
+    <circle cx="260" cy="92" r="16" fill="#d2b07a"/>
+    <circle cx="380" cy="92" r="16" fill="#0f1012" stroke="#d2b07a" stroke-width="2"/>
+    <circle cx="500" cy="92" r="16" fill="#0f1012" stroke="#2a2d31" stroke-width="2"/>
+    <g font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="13" font-weight="700" text-anchor="middle">
+        <text x="140" y="97" fill="#0f1012">1</text>
+        <text x="260" y="97" fill="#0f1012">2</text>
+        <text x="380" y="97" fill="#d2b07a">3</text>
+        <text x="500" y="97" fill="#8a857c">4</text>
+    </g>
+    <g font-family="'JetBrains Mono', ui-monospace, Consolas, monospace" font-size="12" fill="#8a857c" text-anchor="middle">
+        <text x="140" y="132">datos</text>
+        <text x="260" y="132">correo</text>
+        <text x="380" y="132" fill="#d2b07a">aprobación</text>
+        <text x="500" y="132">acceso</text>
+    </g>
+
+    <!-- Formulario -->
+    <rect x="160" y="158" width="320" height="208" rx="10" fill="#0f1012" stroke="#2a2d31"/>
+    <rect x="184" y="182" width="88" height="8" rx="4" fill="#8a857c"/>
+    <rect x="184" y="198" width="272" height="32" rx="6" fill="none" stroke="#2a2d31" stroke-width="2"/>
+    <rect x="184" y="246" width="120" height="8" rx="4" fill="#8a857c"/>
+    <rect x="184" y="262" width="272" height="32" rx="6" fill="none" stroke="#d2b07a" stroke-width="2"/>
+    <rect x="196" y="274" width="2" height="10" fill="#d2b07a"/>
+    <rect x="336" y="314" width="120" height="34" rx="17" fill="#d2b07a"/>
+    <text x="396" y="336" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600" fill="#0f1012">Siguiente →</text>
+
+    <!-- Candado: contenido para miembros -->
+    <rect x="532" y="250" width="56" height="44" rx="8" fill="#0f1012" stroke="#d2b07a" stroke-width="2"/>
+    <path d="M544 250 V236 A16 16 0 0 1 576 236 V250" fill="none" stroke="#d2b07a" stroke-width="2"/>
+    <circle cx="560" cy="270" r="5" fill="#d2b07a"/>
+</svg>
