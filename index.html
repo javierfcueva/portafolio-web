@@ -380,12 +380,92 @@
         </section>
 
         <section id="contacto" class="section">
-            <!-- Contacto -->
+            <div class="container">
+                <header class="section-head">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">Contacto</h2>
+                </header>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p class="contact-intro">
+                            ¿Tienes un sitio que necesita cargar más rápido, una migración pendiente o un
+                            proyecto nuevo? Cuéntame en qué estás trabajando.
+                        </p>
+                        <p>
+                            Puedes usar el formulario o escribirme directamente por cualquiera de estos canales.
+                        </p>
+
+                        <ul class="contact-links">
+                            <li>
+                                <a class="contact-link" href="https://www.linkedin.com/in/javier-cueva" target="_blank" rel="noopener">
+                                    <span class="contact-link-label">LinkedIn</span>
+                                    <span class="contact-link-value">linkedin.com/in/javier-cueva</span>
+                                    <span class="contact-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://github.com/javierfcueva" target="_blank" rel="noopener">
+                                    <span class="contact-link-label">GitHub</span>
+                                    <span class="contact-link-value">github.com/javierfcueva</span>
+                                    <span class="contact-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://cueva.dev" target="_blank" rel="noopener">
+                                    <span class="contact-link-label">Sitio web</span>
+                                    <span class="contact-link-value">cueva.dev</span>
+                                    <span class="contact-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="form-field">
+                            <label class="form-label" for="nombre">Nombre</label>
+                            <input class="form-input" type="text" id="nombre" name="nombre" autocomplete="name"
+                                placeholder="Tu nombre" required minlength="2">
+                            <p class="form-error">Escribe tu nombre.</p>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="form-label" for="correo">Correo electrónico</label>
+                            <input class="form-input" type="email" id="correo" name="correo" autocomplete="email"
+                                placeholder="nombre@correo.com" required>
+                            <p class="form-error">Escribe un correo válido, por ejemplo nombre@correo.com.</p>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="form-label" for="mensaje">Mensaje</label>
+                            <textarea class="form-input form-textarea" id="mensaje" name="mensaje" rows="5"
+                                placeholder="Cuéntame sobre tu proyecto" required minlength="10"></textarea>
+                            <p class="form-error">El mensaje debe tener al menos 10 caracteres.</p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="button">Enviar mensaje <span aria-hidden="true">→</span></button>
+                            <p class="form-note">Formulario de demostración: no envía ni guarda datos.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <!-- Pie de página -->
+        <div class="container footer-inner">
+            <p class="footer-copy">© 2026 Javier Cueva · Hecho con HTML y CSS</p>
+
+            <nav class="footer-nav" aria-label="Enlaces del pie de página">
+                <ul class="footer-links">
+                    <li><a class="footer-link" href="https://github.com/javierfcueva" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a class="footer-link" href="https://www.linkedin.com/in/javier-cueva" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a class="footer-link" href="https://cueva.dev" target="_blank" rel="noopener">cueva.dev</a></li>
+                    <li><a class="footer-link footer-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>
