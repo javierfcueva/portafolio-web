@@ -1,11 +1,11 @@
 /* ==========================================================================
    Portafolio · Javier Cueva
    Estructura del archivo:
-   1. Variables (tokens de diseño)
+   1. Variables (tokens de diseño) y tema claro/oscuro
    2. Reset y estilos base
    3. Utilidades
    4. Componentes (etiquetas, botones)
-   5. Encabezado y navegación
+   5. Encabezado, navegación e interruptor de tema
    6. Sección principal
    7. Encabezados de sección
    8. Sobre mí
@@ -13,6 +13,7 @@
    10. Proyectos
    11. Contacto
    12. Pie de página
+   13. Animaciones de aparición
    ========================================================================== */
 
 
@@ -20,16 +21,17 @@
    -------------------------------------------------------------------------- */
 
 :root {
-    /* Colores: tema oscuro por defecto */
-    --bg: #0f1012;
-    --surface: #16181b;
-    --ink: #ece8e1;
-    --muted: #8a857c;
-    --rule: #2a2d31;
-    --accent: #d2b07a;
-    --accent-ink: #0f1012;
-    --danger: #f0846c;
-    --success: #4ade80;
+    /* Colores: light-dark(tema claro, tema oscuro). El tema activo lo decide color-scheme */
+    --bg: light-dark(#f6f4ef, #0f1012);
+    --surface: light-dark(#ffffff, #16181b);
+    --ink: light-dark(#18181a, #ece8e1);
+    --muted: light-dark(#6b665e, #8a857c);
+    --rule: light-dark(#dedad2, #2a2d31);
+    --accent: light-dark(#7f6024, #d2b07a);
+    --accent-ink: light-dark(#f6f4ef, #0f1012);
+    --danger: light-dark(#b3361f, #f0846c);
+    --success: light-dark(#15803d, #4ade80);
+    --shadow: light-dark(rgb(24 24 26 / 0.25), rgb(0 0 0 / 0.6));
 
     /* Tipografía */
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -67,6 +69,21 @@
     color-scheme: dark;
 }
 
+/* Tema: se respeta la preferencia del sistema y el interruptor del encabezado la invierte */
+:root:has(.theme-input:checked) {
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+    }
+
+    :root:has(.theme-input:checked) {
+        color-scheme: dark;
+    }
+}
+
 
 /* 2. Reset y estilos base
    -------------------------------------------------------------------------- */
@@ -95,6 +112,9 @@ body {
     font-size: var(--text-base);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    transition:
+        background-color 0.3s var(--ease),
+        color 0.3s var(--ease);
 }
 
 img,
@@ -161,6 +181,16 @@ p {
     margin-inline: auto;
 }
 
+/* Oculta un elemento a la vista pero lo mantiene para lectores de pantalla y teclado */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 .skip-link {
     position: absolute;
     top: var(--space-2);
@@ -181,7 +211,7 @@ p {
 }
 
 .section {
-    padding-block: var(--space-24);
+    padding-block: clamp(var(--space-16), 10vw, var(--space-24));
     border-top: 1px solid var(--rule);
 }
 
@@ -247,7 +277,7 @@ p {
 }
 
 
-/* 5. Encabezado y navegación
+/* 5. Encabezado, navegación e interruptor de tema
    -------------------------------------------------------------------------- */
 
 .site-header {
@@ -323,7 +353,51 @@ p {
     background-color: transparent;
 }
 
-/* En pantallas pequeñas el menú pasa a una segunda fila con scroll horizontal */
+.main-nav {
+    margin-left: auto;
+}
+
+/* Interruptor de tema: un checkbox oculto y su etiqueta como botón (solo CSS) */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    color: var(--muted);
+    cursor: pointer;
+    transition:
+        border-color var(--duration) var(--ease),
+        color var(--duration) var(--ease);
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-input:focus-visible + .theme-toggle {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Ícono de medio círculo dibujado con CSS; gira al cambiar de tema */
+.theme-icon {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+    transition: transform 0.4s var(--ease);
+}
+
+.theme-input:checked + .theme-toggle .theme-icon {
+    transform: rotate(180deg);
+}
+
+/* En pantallas pequeñas el menú pasa a una segunda fila a todo el ancho */
 @media (max-width: 760px) {
     .header-inner {
         flex-wrap: wrap;
@@ -332,14 +406,22 @@ p {
     }
 
     .main-nav {
-        width: calc(100% + 2 * var(--space-3));
-        margin-inline: calc(-1 * var(--space-3));
+        order: 3;
+        width: 100%;
+        margin-left: 0;
         overflow-x: auto;
         scrollbar-width: none;
     }
 
     .nav-list {
+        justify-content: space-between;
+        gap: 0;
         padding-block: var(--space-2);
+    }
+
+    .nav-link {
+        padding-inline: clamp(0.3rem, 1.5vw, var(--space-3));
+        font-size: clamp(0.75rem, 3.3vw, 0.8125rem);
     }
 
     .nav-link-cta {
@@ -414,7 +496,7 @@ p {
 .avatar {
     width: 100%;
     border-radius: calc(var(--radius) * 3);
-    box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+    box-shadow: 0 30px 60px -30px var(--shadow);
     transition: transform 0.3s var(--ease);
 }
 
@@ -443,18 +525,18 @@ p {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background-color: #4ade80;
-    box-shadow: 0 0 0 0 rgb(74 222 128 / 0.6);
+    background-color: var(--success);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--success) 60%, transparent);
     animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
     70% {
-        box-shadow: 0 0 0 0.5rem rgb(74 222 128 / 0);
+        box-shadow: 0 0 0 0.5rem transparent;
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgb(74 222 128 / 0);
+        box-shadow: 0 0 0 0 transparent;
     }
 }
 
@@ -959,4 +1041,36 @@ p {
 
 .footer-top {
     color: var(--ink);
+}
+
+
+/* 13. Animaciones de aparición
+   -------------------------------------------------------------------------- */
+
+/* Los bloques aparecen al entrar en pantalla con el scroll, sin JavaScript.
+   Se anima "translate" (no "transform") para no chocar con el hover de las tarjetas.
+   Si el navegador no lo soporta o el usuario prefiere menos movimiento, todo se ve sin animar. */
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        .section-head,
+        .section-lead,
+        .about-text,
+        .stats,
+        .skill-card,
+        .stack,
+        .project-card,
+        .contact-info,
+        .contact-form {
+            animation: reveal linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 70%;
+        }
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 0 2rem;
+    }
 }
